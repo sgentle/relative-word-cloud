@@ -1,0 +1,66 @@
+<!doctype html>
+<head>
+  <title>Relative Word Cloud</title>
+  <style>
+  textarea {
+    height: 300px;
+    width: 300px;
+    padding: 2px;
+  }
+  select {
+    width: 306px;
+  }
+  #cloud {
+    font-size: 48px;
+    width: 600px;
+  }
+  #cloud span {
+  }
+  </style>
+</head>
+<body>
+  <select id="target-select">
+    <option value="pg/125 - Hackers and Painters.txt">Paul Graham - Hackers and Painters</option>
+    <option value="pg/75 - Microsoft is Dead.txt" selected>Paul Graham - Microsoft is Dead</option>
+    <option value="pg/131 - A Plan for Spam.txt">Paul Graham - A Plan for Spam</option>
+    <option value="pg/129 - Better Bayesian Filtering.txt">Paul Graham - Better Bayesian Filtering</option>
+    <option value="pg/9 - Schlep Blindness.txt">Paul Graham - Schlep Blindness</option>
+    <option disabled>--</option>
+    <option value="bernie/2015-07-25-southern-christian-leadership-conference.txt">Bernie Sanders - 2015-07-25 - Southern Christian Leadership Conference</option>
+    <option value="bernie/2015-08-10-national-nurses-united.txt">Bernie Sanders - 2015-08-10 - National Nurses United</option>
+    <option value="bernie/2015-08-18-afl-cio.txt">Bernie Sanders - 2015-08-18 - AFL-CIO</option>
+    <option value="bernie/2015-09-14-liberty-university.txt">Bernie Sanders - 2015-09-14 - Liberty University</option>
+2015-09-14-liberty-university.txt
+    <option value="bernie/2015-11-19-democratic-socialism-in-the-united-states.txt">Bernie Sanders - 2015-11-19 - Democratic Socialism in the United States</option>
+    <option value="bernie/2015-11-21-presidential-justice-forum.txt">Bernie Sanders - 2015-11-21 - Presidential Justice Forum</option>
+    <option disabled>--</option>
+    <option value="shakespeare/hamlet.txt">William Shakespeare - Hamlet</option>
+    <option value="shakespeare/macbeth.txt">William Shakespeare - Macbeth</option>
+    <option value="shakespeare/much_ado.txt">William Shakespeare - Much Ado About Nothing</option>
+    <option value="shakespeare/romeo_juliet.txt">William Shakespeare - Romeo and Juliet</option>
+    <option value="shakespeare/taming_shrew.txt">William Shakespeare - The Taming of The Shrew</option>
+    <option value="shakespeare/midsummer.txt">William Shakespeare - A Midsummer Night's Dream</option>
+    <option disabled>--</option>
+    <option value="custom">Custom</option>
+  </select>
+  <select id="base-select">
+    <option value="base/bernie.json">Bernie Sanders</option>
+    <option value="base/pg.json" selected>Paul Graham</option>
+    <option value="base/shakespeare.json">William Shakespeare</option>
+    <option value="base/blank.json">Blank</option>
+    <option disabled>--</option>
+    <option value="custom">Custom</option>
+  </select>
+  <br>
+  <textarea id="target">
+  </textarea>
+  <textarea id="base" disabled>
+  [Base data not displayed]
+  </textarea>
+  <br>
+  <button id="traditional">Traditional word cloud</button>
+  <button id="relative">Relative word cloud</button>
+  <div id="cloud"></div>
+  <script src="fetch.js"></script>
+  <script src="relative-word-cloud.js"></script>
+</body>
